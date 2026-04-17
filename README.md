@@ -7,7 +7,7 @@
 
 ## The Business Problem
 
-Nigerian Tier 1 banks collectively hold billions of naira in loan exposure to FMCG companies. When a macro shock hits — a currency devaluation, a fuel subsidy removal, a spike in inflation — relationship managers and credit analysts need to answer one urgent question fast:
+Nigerian Tier 1 banks collectively hold billions of naira in loan exposure to FMCG companies. When a macro shock hits, a currency devaluation, a fuel subsidy removal, a spike in inflation, relationship managers and credit analysts need to answer one urgent question fast:
 
 > *Is our client still healthy enough to service their debt?*
 
