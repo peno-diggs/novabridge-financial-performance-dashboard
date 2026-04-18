@@ -141,16 +141,37 @@ The Q3 deterioration was macro-driven and is now reversing. Full-year revenue va
 
 ```dax
 Total Actual Revenue = SUM(Actuals_Data[Revenue])
+
 Total Actual EBITDA = SUM(Actuals_Data[EBITDA])
+
 Actual Gross Profit = SUM(Actuals_Data[Gross_Profit])
+
 Actual EBITDA Margin = DIVIDE([Total Actual EBITDA],[Total Actual Revenue],0)
+
 Actual GP Margin = DIVIDE([Actual Gross Profit],[Total Actual Revenue],0)
+
 Logistics % of Revenue = DIVIDE(SUM(Actuals_Data[Logistics]),[Total Actual Revenue],0)
-Total Budget Revenue = CALCULATE(SUM(Budget_Data[Revenue]),TREATAS(VALUES(Actuals_Data[Division]),Budget_Data[Division]),TREATAS(VALUES(Actuals_Data[Month_Number]),Budget_Data[Month_Number]),TREATAS(VALUES(Actuals_Data[Region]),Budget_Data[Region]))
-Total Budget EBITDA = CALCULATE(SUM(Budget_Data[EBITDA]),TREATAS(...))
+
+Total Budget Revenue = CALCULATE(
+    SUM(Budget_Data[Revenue]),
+    TREATAS(VALUES(Actuals_Data[Division]),Budget_Data[Division]),
+    TREATAS(VALUES(Actuals_Data[Month_Number]),Budget_Data[Month_Number]),
+    TREATAS(VALUES(Actuals_Data[Region]),Budget_Data[Region])
+)
+
+Total Budget EBITDA = CALCULATE(
+    SUM(Budget_Data[EBITDA]),
+    TREATAS(VALUES(Actuals_Data[Division]),Budget_Data[Division]),
+    TREATAS(VALUES(Actuals_Data[Month_Number]),Budget_Data[Month_Number]),
+    TREATAS(VALUES(Actuals_Data[Region]),Budget_Data[Region])
+)
+
 Revenue Variance = [Total Actual Revenue] - [Total Budget Revenue]
+
 Revenue Variance % = DIVIDE([Revenue Variance],[Total Budget Revenue],0)
+
 EBITDA Variance = [Total Actual EBITDA] - [Total Budget EBITDA]
+
 EBITDA Variance % = DIVIDE([EBITDA Variance],[Total Budget EBITDA],0)
 ```
 
